@@ -1,0 +1,21 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.1
+
+stages:
+    - compile backend
+    - test backend
+
+variables:
+    SOLUTION_FILE: "./src/RejectItDemo.sln"
+
+before_script:
+    - "dotnet restore $SOLUTION_FILE"
+
+build:
+    stage: compile
+    script:
+        - dotnet build $SOLUTION_FILE --configuration Release
+
+test:
+    stage: test
+    script: 
+        - dotnet test $SOLUTION_FILE
