@@ -8,17 +8,18 @@ matrix:
       dotnet: 3.1
       before_script:
         - cd src/backend
-        - dotnet restore solution-name.sln
+        - dotnet restore RejectItDemo.sln
       script:
-        - dotnet build solution-name.sln
-        - dotnet test solution-name.sln
+        - dotnet build RejectItDemo.sln
+        - dotnet test RejectItDemo.sln
 
     - language: node_js
       node_js:
         - 12.4.0
       before_install:
-        - cd src/frontend
+        - cd src/RejectItDemo/ClientApp
       install:
         - npm install
       script:
-        - yarn test
+        - npm lint
+        - npm test-headless-ci-only
