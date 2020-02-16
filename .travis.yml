@@ -7,10 +7,10 @@ matrix:
       env:
         - SOLUTION_FILE=src/RejectItDemo.sln
       install:
-        - dotnet restore $PROJECT_PATH
+        - dotnet restore $SOLUTION_FILE
       script:
-        - dotnet build $PROJECT_PATH
-        - dotnet test $PROJECT_PATH
+        - dotnet build $SOLUTION_FILE
+        - dotnet test $SOLUTION_FILE
 
     - language: node_js
       mono: none
