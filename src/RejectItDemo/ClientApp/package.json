@@ -7,6 +7,7 @@
     "build": "ng build",
     "build:ssr": "ng run RejectItDemo:server:dev",
     "test": "ng test",
+    "test-headless-ci-only": "ng test --browsers ChromiumNoSandbox",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -29,7 +30,10 @@
     "oidc-client": "^1.9.1",
     "popper.js": "^1.16.0",
     "rxjs": "^6.5.3",
-    "zone.js": "0.9.1"
+    "zone.js": "0.9.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "puppeteer": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.14",
@@ -54,5 +58,11 @@
     "protractor": "~5.4.2",
     "ts-node": "~8.4.1",
     "tslint": "~5.20.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "ng lint && ng test --browsers ChromiumNoSandbox"
+    }
   }
 }
