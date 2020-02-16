@@ -62,7 +62,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "ng lint && ng test --browsers ChromiumNoSandbox"
+      "pre-push": "ng lint && ng test"
     }
   }
 }
