@@ -23,10 +23,10 @@ We are all humans, so we make mistakes and nobody is perfect. If any team member
 
 1. Commit as often as it possible. Do not care about runner optimization or smth else. Commits represent your progress.
 2. If you work with a ticket, you should name your branch with following patterns:
-   - `feature/ticket-NNN` for features (`feature/PI-1`);
-   - `bugfix/ticket-NNN` for bugfixes (`bugfix/PI-1`);
-   - `hotfix/ticket-NNN` for hotfixes (bugfixes for production bugs) (`hotfix/PI-1`);
-   - `task/ticket-NNN` for tasks that are not related to user stories but require some code changes (`task/PI-1`).
+   - `feature/ticket-NNN` for features (`feature/CODE-1`);
+   - `bugfix/ticket-NNN` for bugfixes (`bugfix/CODE-1`);
+   - `hotfix/ticket-NNN` for hotfixes (bugfixes for production bugs) (`hotfix/CODE-1`);
+   - `task/ticket-NNN` for tasks that are not related to user stories but require some code changes (`task/CODE-1`).
 3. Merge code from parent branch as often as it possible. It will avoid merge conflicts in future.
 4. Try to split big user stories in subtasks.
 5. We should prefer `rebase` to `merge` operation.
