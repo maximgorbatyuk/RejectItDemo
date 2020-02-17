@@ -1,4 +1,4 @@
-# Reject It Demo applciation
+# Reject It Demo application
 
 [![Build Status](https://travis-ci.com/maximgorbatyuk/RejectItDemo.svg?branch=master)](https://travis-ci.com/maximgorbatyuk/RejectItDemo)
 
